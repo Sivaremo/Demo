@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <style>
     h1 {
       font-family: "Orbitron", sans-serif;
@@ -18,19 +18,19 @@
   </style>
 </head>
 
-<body class="bg-gray-100 min-h-screen p-8">
+<body class="bg-gray-100 min-h-screen p-4 md:p-8">
 
   <!-- Header -->
-  <header class="text-center mb-12">
-    <h1 class="text-5xl font-extrabold text-blue-700">Laysans Solutions</h1>
-    <p class="text-lg text-gray-600 mt-2">Company Data Mining Portal</p>
+  <header class="text-center mb-8 md:mb-12">
+    <h1 class="text-3xl md:text-5xl font-extrabold text-blue-700">Laysans Solutions</h1>
+    <p class="text-base md:text-lg text-gray-600 mt-2">Company Data Mining Portal</p>
   </header>
 
   <!-- Form Section -->
-  <section id="formSection" class="max-w-6xl mx-auto bg-white p-10 rounded-3xl shadow-2xl">
-    <h2 class="text-3xl font-bold text-gray-700 mb-8">Enter Company Information</h2>
+  <section id="formSection" class="max-w-6xl mx-auto bg-white p-6 md:p-10 rounded-3xl shadow-2xl">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-700 mb-6 md:mb-8">Enter Company Information</h2>
 
-    <form id="companyForm" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <form id="companyForm" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <!-- Company Name -->
       <div>
         <label class="block mb-2 font-semibold text-gray-600">Company Name<span class="text-red-500">*</span></label>
@@ -121,7 +121,7 @@
 
       <!-- Submit Button -->
       <div class="md:col-span-2 flex justify-center mt-8">
-        <button type="submit" class="bg-blue-600 text-white font-semibold px-10 py-3 rounded-xl hover:bg-blue-700 transition duration-300">
+        <button type="submit" class="w-full md:w-auto bg-blue-600 text-white font-semibold px-8 md:px-10 py-3 rounded-xl hover:bg-blue-700 transition duration-300">
           Save Company Info
         </button>
       </div>
@@ -129,13 +129,13 @@
   </section>
 
   <!-- Report Section -->
-  <section id="reportSection" class="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-2xl mt-16 hidden text-center">
-    <h2 class="text-3xl font-bold text-gray-700 mb-8">Download Company Data Report</h2>
+  <section id="reportSection" class="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-3xl shadow-2xl mt-12 md:mt-16 hidden text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-700 mb-6 md:mb-8">Download Company Data Report</h2>
 
     <!-- Company Link Display -->
-    <div id="companyLinkDisplay" class="mb-8 text-blue-600 underline text-lg"></div>
+    <div id="companyLinkDisplay" class="mb-6 md:mb-8 text-blue-600 underline text-base md:text-lg"></div>
 
-    <button onclick="downloadCSV()" class="bg-green-600 text-white font-semibold px-10 py-3 rounded-xl hover:bg-green-700 transition duration-300">
+    <button onclick="downloadCSV()" class="w-full md:w-auto bg-green-600 text-white font-semibold px-8 md:px-10 py-3 rounded-xl hover:bg-green-700 transition duration-300">
       Download CSV
     </button>
   </section>
@@ -184,7 +184,7 @@
         'status', 'industryType', 'address', 'state', 'country', 'product1', 'product2', 'urlLink'
       ];
       const csvRows = [
-        headers.join(','),
+        headers.join(','), 
         ...minedData.map(row => headers.map(field => `"${row[field] || ''}"`).join(','))
       ];
       const csvContent = csvRows.join('\n');
