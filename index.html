@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laysans Solutions - Company Data Mining</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      font-family: "Orbitron", sans-serif;
+    }
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-8">
+
+  <!-- Header -->
+  <header class="text-center mb-12">
+    <h1 class="text-5xl font-extrabold text-blue-700">Laysans Solutions</h1>
+    <p class="text-lg text-gray-600 mt-2">Company Data Mining Portal</p>
+  </header>
+
+  <!-- Form Section -->
+  <section id="formSection" class="max-w-6xl mx-auto bg-white p-10 rounded-3xl shadow-2xl">
+    <h2 class="text-3xl font-bold text-gray-700 mb-8">Enter Company Information</h2>
+
+    <form id="companyForm" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Company Name -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Company Name<span class="text-red-500">*</span></label>
+        <input type="text" name="companyName" required class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Contact Number 1 -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Contact Number 1<span class="text-red-500">*</span></label>
+        <input type="text" name="contactNumber1" required class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Contact Number 2 -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Contact Number 2</label>
+        <input type="text" name="contactNumber2" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Email ID 1 -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Email ID 1<span class="text-red-500">*</span></label>
+        <input type="email" name="email1" required class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Email ID 2 -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Email ID 2</label>
+        <input type="email" name="email2" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Fax -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Fax</label>
+        <input type="text" name="fax" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Company Status -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Company Working Status<span class="text-red-500">*</span></label>
+        <select name="status" required class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+          <option value="">Select Status</option>
+          <option value="working">Working</option>
+          <option value="not working">Not Working</option>
+        </select>
+      </div>
+
+      <!-- Industry Type -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Industry Type</label>
+        <input type="text" name="industryType" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Address -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Address</label>
+        <input type="text" name="address" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- State -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">State</label>
+        <input type="text" name="state" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Country -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Country</label>
+        <input type="text" name="country" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Product 1 -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Product 1</label>
+        <input type="text" name="product1" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Product 2 -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">Product 2</label>
+        <input type="text" name="product2" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- URL Link -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-600">URL Link</label>
+        <input type="text" name="urlLink" class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="md:col-span-2 flex justify-center mt-8">
+        <button type="submit" class="bg-blue-600 text-white font-semibold px-10 py-3 rounded-xl hover:bg-blue-700 transition duration-300">
+          Save Company Info
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Report Section -->
+  <section id="reportSection" class="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-2xl mt-16 hidden text-center">
+    <h2 class="text-3xl font-bold text-gray-700 mb-8">Download Company Data Report</h2>
+
+    <!-- Company Link Display -->
+    <div id="companyLinkDisplay" class="mb-8 text-blue-600 underline text-lg"></div>
+
+    <button onclick="downloadCSV()" class="bg-green-600 text-white font-semibold px-10 py-3 rounded-xl hover:bg-green-700 transition duration-300">
+      Download CSV
+    </button>
+  </section>
+
+  <script>
+    const form = document.getElementById('companyForm');
+    const formSection = document.getElementById('formSection');
+    const reportSection = document.getElementById('reportSection');
+    const companyLinkDisplay = document.getElementById('companyLinkDisplay');
+    let minedData = [];
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const companyInfo = {};
+      formData.forEach((value, key) => {
+        companyInfo[key] = value.trim();
+      });
+      minedData.push(companyInfo);
+      alert('✅ Company data saved successfully!');
+      form.reset();
+
+      // Show report section and hide form
+      formSection.classList.add('hidden');
+      reportSection.classList.remove('hidden');
+
+      // Display Company Link
+      if (companyInfo.urlLink) {
+        companyLinkDisplay.innerHTML = `
+          <a href="${companyInfo.urlLink}" target="_blank" class="hover:underline">
+            Visit Company Website
+          </a>
+        `;
+      } else {
+        companyLinkDisplay.innerHTML = `<span class="text-gray-400">No Company URL provided.</span>`;
+      }
+    });
+
+    function downloadCSV() {
+      if (minedData.length === 0) {
+        alert('⚠️ No company data available to download.');
+        return;
+      }
+      const headers = [
+        'companyName', 'contactNumber1', 'contactNumber2', 'email1', 'email2', 'fax',
+        'status', 'industryType', 'address', 'state', 'country', 'product1', 'product2', 'urlLink'
+      ];
+      const csvRows = [
+        headers.join(','),
+        ...minedData.map(row => headers.map(field => `"${row[field] || ''}"`).join(','))
+      ];
+      const csvContent = csvRows.join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'company_data.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+
+</body>
+</html>
